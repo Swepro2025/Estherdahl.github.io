@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Collection Handbag | Esther Dahl</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (Same as main site) -->
+    <header class="header">
+        <!-- Copy header from index.html -->
+		 <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Esther Dahl">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html#collection">Collections</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#craftsmanship">Craftsmanship</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+                    <a href="#" class="cart-btn"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                    <div class="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-inner">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="images/products/bag1-detail.jpg" alt="Esther Dahl Signature Handbag - Front View" id="zoom-image">
+                        <div class="zoom-result" id="zoom-result"></div>
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active" data-large="images/products/bag1-detail.jpg">
+                            <img src="images/products/bag1-thumb.jpg" alt="Thumbnail 1">
+                        </div>
+                        <div class="thumbnail" data-large="images/products/bag1-detail-2.jpg">
+                            <img src="images/products/bag1-thumb-2.jpg" alt="Thumbnail 2">
+                        </div>
+                        <div class="thumbnail" data-large="images/products/bag1-detail-3.jpg">
+                            <img src="images/products/bag1-thumb-3.jpg" alt="Thumbnail 3">
+                        </div>
+                        <div class="thumbnail" data-large="images/products/bag1-detail-4.jpg">
+                            <img src="images/products/bag1-thumb-4.jpg" alt="Thumbnail 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <nav class="breadcrumb">
+                        <a href="index.html">Home</a> / 
+                        <a href="#collections">Collections</a> / 
+                        <a href="#">Signature Collection</a> / 
+                        <span>Classic Tote</span>
+                    </nav>
+
+                    <h1>Signature Classic Tote</h1>
+                    <div class="product-meta">
+                        <span class="product-id">Style #: ED2023-SCT</span>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(42 Reviews)</span>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price">$1,850.00</span>
+                        <span class="original-price">$2,100.00</span>
+                    </div>
+
+                    <div class="product-description">
+                        <p>The Signature Classic Tote embodies timeless elegance with its structured silhouette and hand-stitched Italian leather. Designed for the modern woman who appreciates both form and function, this piece features gold-tone hardware and a roomy interior with premium suede lining.</p>
+                        
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Handcrafted in Florence, Italy</li>
+                            <li><i class="fas fa-check"></i> Full-grain Italian leather</li>
+                            <li><i class="fas fa-check"></i> 24k gold-plated hardware</li>
+                            <li><i class="fas fa-check"></i> Suede interior lining</li>
+                            <li><i class="fas fa-check"></i> Detachable shoulder strap</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option">
+                            <label>Color:</label>
+                            <div class="color-swatches">
+                                <div class="swatch active" data-color="Chestnut" style="background-color: #8B4513;"></div>
+                                <div class="swatch" data-color="Black" style="background-color: #000000;"></div>
+                                <div class="swatch" data-color="Bordeaux" style="background-color: #800020;"></div>
+                            </div>
+                        </div>
+
+                        <div class="option">
+                            <label for="size">Size:</label>
+                            <select id="size">
+                                <option value="small">Small (10" x 8")</option>
+                                <option value="medium" selected>Medium (12" x 10")</option>
+                                <option value="large">Large (14" x 12")</option>
+                            </select>
+                        </div>
+
+                        <div class="option">
+                            <label>Quantity:</label>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                        <button class="btn btn-outline wishlist-btn">
+                            <i class="far fa-heart"></i> Wishlist
+                        </button>
+                    </div>
+
+                    <div class="product-details-accordion">
+                        <div class="accordion-item active">
+                            <div class="accordion-header">
+                                <h3>Description & Details</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Every Esther Dahl Signature Classic Tote is meticulously crafted by our master artisans in Florence, Italy. The leather is vegetable-tanned and hand-burnished for a rich patina that develops beautifully over time. The bag features:</p>
+                                <ul>
+                                    <li>Double top handles with 6" drop</li>
+                                    <li>Detachable and adjustable shoulder strap (18" drop)</li>
+                                    <li>Two interior compartments with zip pocket</li>
+                                    <li>Protective metal feet on base</li>
+                                    <li>Signature engraved plaque</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>Shipping & Returns</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>We offer worldwide express shipping with full insurance. All orders are hand-packed in our signature gift packaging.</p>
+                                <p><strong>Returns:</strong> We accept returns within 14 days of delivery. Items must be in original condition with all packaging.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>Care Instructions</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>To maintain your Esther Dahl handbag:</p>
+                                <ul>
+                                    <li>Store in the provided dust bag when not in use</li>
+                                    <li>Keep away from direct heat and sunlight</li>
+                                    <li>Clean with a soft, dry cloth</li>
+                                    <li>For deeper cleaning, use a leather conditioner specifically for vegetable-tanned leather</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>You May Also Like</h2>
+                <p>Complete your collection with these complementary pieces</p>
+            </div>
+            <div class="collections-grid">
+                <!-- Copy product grid items from index.html (4 items) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as main site) -->
+    <footer class="footer">
+        <!-- Copy footer from index.html -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/product-detail.js"></script>
+</body>
+</html>

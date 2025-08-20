@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Esther Dahl</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+</head>
+<body>
+    <!-- Header (Same as main site) -->
+    <header class="header">
+        <!-- Copy header from index.html -->
+    </header>
+
+    <!-- Checkout Progress Bar -->
+    <section class="checkout-progress">
+        <div class="container">
+            <ul>
+                <li class="active">Cart</li>
+                <li class="active">Information</li>
+                <li>Shipping</li>
+                <li>Payment</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Checkout Main Section -->
+    <main class="checkout">
+        <div class="container">
+            <div class="checkout-grid">
+                <!-- Left Column - Customer Info -->
+                <div class="checkout-info">
+                    <h2>Customer Information</h2>
+                    
+                    <!-- Contact Info -->
+                    <div class="checkout-section">
+                        <h3>Contact Information</h3>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your email address">
+                        </div>
+                    </div>
+                    
+                    <!-- Shipping Address -->
+                    <div class="checkout-section">
+                        <h3>Shipping Address</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" placeholder="First name">
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" placeholder="Last name">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" placeholder="Street and house number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="apartment">Apartment, suite, etc. (optional)</label>
+                            <input type="text" id="apartment" placeholder="Apt, suite, etc.">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select id="country">
+                                    <option value="">Select country</option>
+                                    <option value="US">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="FR">France</option>
+                                    <option value="IT">Italy</option>
+                                    <option value="JP">Japan</option>
+                                    <!-- Add more countries as needed -->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">State/Province</label>
+                                <input type="text" id="state" placeholder="State/Province">
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP/Postal code</label>
+                                <input type="text" id="zip" placeholder="ZIP/Postal code">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" placeholder="Phone number">
+                            <small>For delivery updates</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Shipping Method -->
+                    <div class="checkout-section">
+                        <h3>Shipping Method</h3>
+                        <div class="shipping-methods">
+                            <div class="shipping-method active">
+                                <input type="radio" name="shipping" id="standard" checked>
+                                <label for="standard">
+                                    <span class="method-name">Standard Shipping</span>
+                                    <span class="method-details">3-5 business days</span>
+                                    <span class="method-price">$15.00</span>
+                                </label>
+                            </div>
+                            <div class="shipping-method">
+                                <input type="radio" name="shipping" id="express">
+                                <label for="express">
+                                    <span class="method-name">Express Shipping</span>
+                                    <span class="method-details">1-2 business days</span>
+                                    <span class="method-price">$35.00</span>
+                                </label>
+                            </div>
+                            <div class="shipping-method">
+                                <input type="radio" name="shipping" id="overnight">
+                                <label for="overnight">
+                                    <span class="method-name">Overnight</span>
+                                    <span class="method-details">Next business day</span>
+                                    <span class="method-price">$75.00</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Method -->
+                    <div class="checkout-section">
+                        <h3>Payment Method</h3>
+                        <div class="payment-methods">
+                            <div class="payment-method active">
+                                <input type="radio" name="payment" id="paypal" checked>
+                                <label for="paypal">
+                                    <i class="fab fa-cc-paypal"></i>
+                                    <span>PayPal</span>
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" name="payment" id="credit-card">
+                                <label for="credit-card">
+                                    <i class="far fa-credit-card"></i>
+                                    <span>Credit Card</span>
+                                </label>
+                                
+                                <div class="credit-card-form">
+                                    <div class="form-group">
+                                        <label for="card-number">Card Number</label>
+                                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="card-name">Name on Card</label>
+                                        <input type="text" id="card-name" placeholder="Name on card">
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="expiry">Expiry Date</label>
+                                            <input type="text" id="expiry" placeholder="MM/YY">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv">Security Code</label>
+                                            <input type="text" id="cvv" placeholder="CVV">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Order Notes -->
+                    <div class="checkout-section">
+                        <h3>Order Notes (Optional)</h3>
+                        <div class="form-group">
+                            <textarea id="notes" placeholder="Special instructions, gift messages, etc."></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Order Summary -->
+                <div class="order-summary">
+                    <h2>Your Order</h2>
+                    
+                    <div class="order-items">
+                        <!-- Example Product 1 -->
+                        <div class="order-item">
+                            <div class="item-image">
+                                <img src="images/products/signature-tote.jpg" alt="Signature Tote">
+                                <span class="item-quantity">1</span>
+                            </div>
+                            <div class="item-details">
+                                <h4>Signature Tote</h4>
+                                <p>Chestnut Brown</p>
+                            </div>
+                            <div class="item-price">$1,850.00</div>
+                        </div>
+                        
+                        <!-- Example Product 2 -->
+                        <div class="order-item">
+                            <div class="item-image">
+                                <img src="images/products/crystal-clutch.jpg" alt="Crystal Clutch">
+                                <span class="item-quantity">1</span>
+                            </div>
+                            <div class="item-details">
+                                <h4>Crystal Clutch</h4>
+                                <p>Gold</p>
+                            </div>
+                            <div class="item-price">$2,400.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span>Subtotal</span>
+                            <span>$4,250.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Shipping</span>
+                            <span>$35.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Tax</span>
+                            <span>$340.00</span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Total</span>
+                            <span>$4,625.00</span>
+                        </div>
+                    </div>
+                    
+                    <!-- PayPal Button Container -->
+                    <div id="paypal-button-container"></div>
+                    
+                    <!-- Credit Card Submit Button (hidden by default) -->
+                    <button id="place-order" class="btn btn-primary">Place Order</button>
+                    
+                    <div class="secure-checkout">
+                        <i class="fas fa-lock"></i>
+                        <span>Secure Checkout</span>
+                    </div>
+                    
+                    <div class="return-policy">
+                        <p>By placing your order, you agree to Esther Dahl's <a href="#">privacy policy</a> and <a href="#">terms of service</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as main site) -->
+    <footer class="footer">
+        <!-- Copy footer from index.html -->
+    </footer>
+
+    <script src="js/checkout.js"></script>
+</body>
+</html>
